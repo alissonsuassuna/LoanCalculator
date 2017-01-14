@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <heade>
+        <title>Calculadora Web </title>
+        <link rel=”stylesheet” type=”text/css” href=”css/style.css” />
+        <script src=”script/javascript.js”></script>
+    </heade>
+    <body>
+
+        <table>
+            <tr>
+                <th>Enter Loan Data:</th>
+                <td></td>
+                <th>Digite Empréstimo de dados: saldo do empréstimo, Comulative Equidade, e pagamentos de juros</th>
+            </tr>
+            <tr>
+                <td>Amount of the Loan ($):</td>
+                <td><input id="amount" onchange="calculate();"></td>
+                <td rowspan="8" ><canvas id="graph" width="400" height="250"> </canvas>  </td>
+            </tr>
+            <tr>
+                <td>Annual Interest (%):</td>
+                <td> <input id="apr" onchange="calculate();"> </td>
+            </tr>
+            <tr>
+                <td>Repayment period (years):</td>
+                <td> <input id="years" onchange="calculate();"> </td>
+            </tr>
+             <tr>
+                <td>Zipcode (to find lenders):</td>
+                <td> <input id="zipcode" onchange="calculate();"> </td>
+            </tr>
+            <tr>
+                <th>Approximate Payments:</th>
+                <td><button onclick="calculate();">Calcular</button>  </td>
+            </tr>
+            <tr>
+                <td>Monthly payment:</td>
+                <td>$ <span class="output" id="payment"></span> </td>
+            </tr>
+            <tr>
+                <td>Total payment:</td>
+                <td>$ <span class="output" id="Total"></span>  </td>
+            </tr>
+            <tr>
+                <td>Total interest:</td>
+                <td>$ <span class="output" id="totalinterest"></span></td>
+            </tr>
+            <tr>
+                <th>Sponsors:</th>
+                <td colspan="2">Apply for your loan with one of these fine lenders: <div id="lenders"></div></td>
+            </tr>
+        </table>
+        
+    </body>
+</html>
